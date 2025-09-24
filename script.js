@@ -17,7 +17,7 @@ if (menuBtn) {
   });
 }
 
-// Email form (About Us)
+// About Us form
 const aboutForm = document.getElementById("about-form");
 if (aboutForm) {
   aboutForm.addEventListener("submit", function(e) {
@@ -28,4 +28,4 @@ if (aboutForm) {
     const mailtoLink = `mailto:cyberxdevsofficial@gmail.com?subject=About Us Form Submission&body=Name: ${encodeURIComponent(name)}%0D%0ADescription: ${encodeURIComponent(description)}`;
     window.location.href = mailtoLink;
   });
-                                         }
+}
