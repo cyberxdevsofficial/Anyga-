@@ -1,14 +1,12 @@
-/* ===== Body and hacker background animation ===== */
 body {
   margin: 0;
-  font-family: monospace;
+  font-family: 'Courier New', monospace;
   background: black;
   color: #0f0;
   overflow-x: hidden;
   transition: background 0.3s, color 0.3s;
 }
 
-/* Hacker Matrix style overlay */
 body::before {
   content: "0101010101010100101010010101010101010100101010101010100101010  ";
   position: fixed;
@@ -29,7 +27,6 @@ body::before {
   to { transform: translateY(100%); }
 }
 
-/* ===== Navbar ===== */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -71,7 +68,7 @@ body::before {
   cursor: pointer;
 }
 
-#theme-toggle {
+#theme-toggle, #logout-btn {
   background: none;
   border: none;
   font-size: 20px;
@@ -79,19 +76,21 @@ body::before {
   margin-left: 15px;
 }
 
-/* ===== Sections ===== */
 .section {
   padding: 80px 20px;
   text-align: center;
   min-height: 80vh;
 }
 
-form {
+form, textarea {
   display: flex;
   flex-direction: column;
   gap: 10px;
   max-width: 400px;
   margin: auto;
+  font-family: 'Courier New', monospace;
+  color: #0f0;
+  background: black;
 }
 
 form input, form textarea {
@@ -102,7 +101,7 @@ form input, form textarea {
   color: #0f0;
 }
 
-form button {
+form button, #save-custom {
   padding: 10px;
   background: #0f0;
   color: black;
@@ -111,11 +110,10 @@ form button {
   cursor: pointer;
 }
 
-form button:hover {
+form button:hover, #save-custom:hover {
   background: #00ff99;
 }
 
-/* ===== Footer ===== */
 footer {
   text-align: center;
   padding: 15px;
@@ -123,7 +121,6 @@ footer {
   color: #0f0;
 }
 
-/* ===== Light Theme ===== */
 body.light {
   background: #fff;
   color: #000;
@@ -147,7 +144,6 @@ body.light footer {
   color: #000;
 }
 
-/* ===== Responsive Menu ===== */
 @media (max-width: 768px) {
   .menu-btn {
     display: block;
