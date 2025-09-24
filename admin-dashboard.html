@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Anuga Senithu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Admin Dashboard</div>
+    <button id="logout-btn">Logout</button>
+  </nav>
+
+  <section class="section">
+    <h1>Welcome Admin</h1>
+    <p>Website View Counter: <span id="view-counter">0</span></p>
+
+    <h2>Website Edit / Customize Tool</h2>
+    <p>Here you can add future customization tools for your website.</p>
+    <textarea id="custom-editor" rows="10" cols="50" placeholder="Edit your website content..."></textarea>
+    <button id="save-custom">Save Changes</button>
+  </section>
+
+  <script>
+    // Check if admin is logged in
+    if (localStorage.getItem("adminLoggedIn") !== "true") {
+      window.location.href = "admin-login.html";
+    }
+
+    // Simple view counter
+    let views = localStorage.getItem("websiteViews") || 0;
+    views++;
+    localStorage.setItem("websiteViews", views);
+    document.getElementById("view-counter").textContent = views;
+
+    // Logout button
+    document.getElementById("logout-btn").addEventListener("click", function() {
+      localStorage.removeItem("adminLoggedIn");
+      window.location.href = "admin-login.html";
+    });
+
+    // Save customization tool (placeholder functionality)
+    document.getElementById("save-custom").addEventListener("click", function() {
+      const content = document.getElementById("custom-editor").value;
+      localStorage.setItem("customContent", content);
+      alert("Changes saved! (Local storage only)");
+    });
+  </script>
+</body>
+</html>
