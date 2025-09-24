@@ -7,61 +7,51 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">Anuga Senithu</div>
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="https://bit.ly/anuwh-md-mini-bot" target="_blank">Mini Bot</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#contact">Contact Us</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#projects">Projects</a></li>
-      </ul>
-      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-    </nav>
-  </header>
-
-  <!-- Main Section -->
-  <section class="hero">
-    <h1>Welcome to Anuga Senithu</h1>
-    <p>Your trusted platform for bots, services, and projects.</p>
-  </section>
-
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Us</h2>
-    <p>We are a tech-driven community building bots, tools, and creative projects for users worldwide.</p>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services">
-    <h2>Our Services</h2>
-    <ul>
-      <li>Custom Bot Development</li>
-      <li>API Integration</li>
-      <li>Web App Solutions</li>
-      <li>Creative Tech Projects</li>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Anuga Senithu</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="https://bit.ly/anuwh-md-mini-bot" target="_blank">Mini Bot</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact Us</a></li>
     </ul>
+    <button id="theme-toggle">🌙</button>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="section">
+    <h1>Welcome to Anuga Senithu</h1>
+    <p>This is the homepage.</p>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="section">
+    <h1>About Us</h1>
+    <p>Fill the form below to contact us.</p>
+    <form id="about-form">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <textarea id="description" placeholder="Description" required></textarea>
+      <button type="submit">Send Email</button>
+    </form>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects">
-    <h2>Our Projects</h2>
-    <p>Explore our innovative work including bots, automation, and web-based applications.</p>
+  <section id="projects" class="section">
+    <h1>Projects</h1>
+    <p>Check out our Mini Bot project:</p>
+    <a href="https://bit.ly/anuwh-md-mini-bot" target="_blank" class="project-link">Mini Bot</a>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: anuga@example.com</p>
-    <p>WhatsApp: +94 70 123 4567</p>
+  <!-- Contact Us Section -->
+  <section id="contact" class="section">
+    <h1>Contact Us</h1>
+    <p>Email: cyberxdevsofficial@gmail.com</p>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <p>© 2025 Anuga Senithu. All Rights Reserved.</p>
+    <p>© 2025 Anuga Senithu | Powered by CyberX Devs</p>
   </footer>
 
   <script src="script.js"></script>
