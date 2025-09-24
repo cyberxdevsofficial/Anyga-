@@ -2,6 +2,9 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   transition: background 0.3s, color 0.3s;
+  background: black url("https://i.ibb.co/6rk7dRM/hacker-bg.gif") repeat center center fixed;
+  background-size: cover;
+  color: #fff;
 }
 
 .navbar {
@@ -9,7 +12,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  background: #222;
+  background: rgba(0, 0, 0, 0.8);
   color: #fff;
 }
 
@@ -19,14 +22,31 @@ body {
   gap: 20px;
 }
 
+.nav-links li {
+  display: inline-block;
+}
+
 .nav-links li a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
 }
 
+.nav-links li a.active {
+  color: #0f0;
+}
+
 .nav-links li a:hover {
-  color: #f39c12;
+  color: #0f0;
+}
+
+.menu-btn {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
 }
 
 #theme-toggle {
@@ -34,11 +54,13 @@ body {
   border: none;
   font-size: 20px;
   cursor: pointer;
+  margin-left: 15px;
 }
 
 .section {
-  padding: 60px 20px;
+  padding: 80px 20px;
   text-align: center;
+  min-height: 80vh;
 }
 
 form {
@@ -52,26 +74,28 @@ form {
 form input, form textarea {
   padding: 10px;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #555;
+  background: #111;
+  color: #fff;
 }
 
 form button {
   padding: 10px;
-  background: #f39c12;
-  color: white;
+  background: #0f0;
+  color: black;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
 form button:hover {
-  background: #e67e22;
+  background: #09c909;
 }
 
 footer {
   text-align: center;
   padding: 15px;
-  background: #222;
+  background: rgba(0, 0, 0, 0.8);
   color: white;
 }
 
@@ -90,14 +114,34 @@ body.light .nav-links li a {
   color: #000;
 }
 
+body.light .nav-links li a.active {
+  color: #f39c12;
+}
+
 body.light footer {
   background: #eee;
   color: #000;
-}    background: black;
+}
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9);
     position: absolute;
     top: 60px;
-    right: 20px;
+    right: 0;
     width: 200px;
+    padding: 20px;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  }    width: 200px;
     padding: 15px;
     border-radius: 10px;
   }
