@@ -1,6 +1,9 @@
+/* ===== Body and hacker background animation ===== */
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
 body {
   margin: 0;
-  font-family: 'Courier New', monospace;
+  font-family: 'Share Tech Mono', monospace; /* NEW hacker sans style font */
   background: black;
   color: #0f0;
   overflow-x: hidden;
@@ -27,6 +30,7 @@ body::before {
   to { transform: translateY(100%); }
 }
 
+/* ===== Navbar ===== */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -76,6 +80,7 @@ body::before {
   margin-left: 15px;
 }
 
+/* ===== Sections ===== */
 .section {
   padding: 80px 20px;
   text-align: center;
@@ -88,7 +93,7 @@ form, textarea {
   gap: 10px;
   max-width: 400px;
   margin: auto;
-  font-family: 'Courier New', monospace;
+  font-family: 'Share Tech Mono', monospace;
   color: #0f0;
   background: black;
 }
@@ -114,6 +119,7 @@ form button:hover, #save-custom:hover {
   background: #00ff99;
 }
 
+/* ===== Footer ===== */
 footer {
   text-align: center;
   padding: 15px;
@@ -121,6 +127,7 @@ footer {
   color: #0f0;
 }
 
+/* ===== Light Theme ===== */
 body.light {
   background: #fff;
   color: #000;
@@ -144,6 +151,7 @@ body.light footer {
   color: #000;
 }
 
+/* ===== Responsive Menu ===== */
 @media (max-width: 768px) {
   .menu-btn {
     display: block;
@@ -161,4 +169,4 @@ body.light footer {
   .nav-links.show {
     display: flex;
   }
-  }
+}
