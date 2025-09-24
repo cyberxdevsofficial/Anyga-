@@ -1,103 +1,99 @@
-/* Reset */
-* {
+body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   font-family: Arial, sans-serif;
+  transition: background 0.3s, color 0.3s;
 }
 
-/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: black;
-  padding: 15px 20px;
-}
-
-.logo {
-  color: red;
-  font-size: 22px;
-  font-weight: bold;
+  padding: 15px 30px;
+  background: #222;
+  color: #fff;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
+  gap: 20px;
 }
 
-.nav-links li {
-  margin: 0 15px;
-}
-
-.nav-links a {
+.nav-links li a {
+  color: #fff;
   text-decoration: none;
-  color: white;
-  font-size: 16px;
-  transition: color 0.3s;
+  font-weight: bold;
 }
 
-.nav-links a:hover {
-  color: red;
+.nav-links li a:hover {
+  color: #f39c12;
 }
 
-/* Toggle Menu (Mobile) */
-.menu-toggle {
-  display: none;
-  font-size: 28px;
-  color: white;
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 20px;
   cursor: pointer;
 }
 
-/* Hero Section */
-.hero {
-  text-align: center;
-  padding: 80px 20px;
-  background: url('https://i.ibb.co/7gDkz8S/hacker-bg.jpg') no-repeat center/cover;
-  color: white;
-}
-
-.hero h1 {
-  font-size: 36px;
-  margin-bottom: 15px;
-}
-
-.hero p {
-  font-size: 18px;
-}
-
-/* Sections */
-section {
+.section {
   padding: 60px 20px;
   text-align: center;
 }
 
-section h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: red;
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: auto;
 }
 
-section p, section ul {
-  font-size: 16px;
-  color: #444;
+form input, form textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
-/* Footer */
-footer {
-  background: black;
+form button {
+  padding: 10px;
+  background: #f39c12;
   color: white;
-  text-align: center;
-  padding: 15px 10px;
-  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: black;
+form button:hover {
+  background: #e67e22;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #222;
+  color: white;
+}
+
+/* Light Theme */
+body.light {
+  background: #fff;
+  color: #000;
+}
+
+body.light .navbar {
+  background: #eee;
+  color: #000;
+}
+
+body.light .nav-links li a {
+  color: #000;
+}
+
+body.light footer {
+  background: #eee;
+  color: #000;
+}    background: black;
     position: absolute;
     top: 60px;
     right: 20px;
